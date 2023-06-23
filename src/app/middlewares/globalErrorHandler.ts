@@ -42,7 +42,7 @@ export const handleValidationError = (
 const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
   config.env === 'development'
     ? console.log('global Error handler', error)
-    : errorlogger.error('global Error handler', error)
+    : console.log('global Error handler', error)
 
   let statusCode = 500
   let message = 'Something went to wrong!'
